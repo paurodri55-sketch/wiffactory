@@ -4,77 +4,104 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>What If Factory</title>
-<meta name="description" content="3D comedy shorts from Iffington. What if… everything went wrong? Watch on YouTube, TikTok and Instagram.">
+<meta name="description" content="3D comedy shorts from Iffington. Watch on YouTube, TikTok and Instagram.">
 <meta property="og:title" content="What If Factory">
-<meta property="og:description" content="3D comedy shorts from Iffington. New episode every few days.">
-<meta property="og:image" content="img/banner.jpg">
+<meta property="og:description" content="3D comedy shorts from Iffington. Dr. Pip invents. Dave suffers.">
+<meta property="og:image" content="https://paurodri55-sketch.github.io/wiffactory/img/banner.jpg">
+<meta name="theme-color" content="#f3a6b6">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#120d1f;--card:#1f1733;--ink:#fff8ec;--soft:#c9bfdc;--sun:#ffb23e;--pink:#ff5d8f;--line:#ffffff1a}
+:root{--ink:#fff8ec;--deep:#24123d;--card:#2c1a4acc;--sun:#ffbf47;--pink:#ff6f9c;--soft:#f3e3ff}
 *{box-sizing:border-box;margin:0}
-body{background:radial-gradient(1200px 600px at 50% -10%,#3a2160 0%,var(--bg) 60%);color:var(--ink);font:500 16px/1.45 Inter,system-ui,sans-serif;min-height:100vh}
+html{background:#24123d}
+body{min-height:100vh;color:var(--ink);font:500 16px/1.45 Inter,system-ui,sans-serif;
+ background:linear-gradient(180deg,#e9a0c8 0%,#f5aa9c 22%,#f8b77c 36%,#8a4f8f 58%,#3a1f5c 76%,#24123d 100%) fixed;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:520px;margin:0 auto;padding:0 16px 48px}
-.hero{position:relative;margin:0 -16px;aspect-ratio:16/9;overflow:hidden}
-.hero img{width:100%;height:100%;object-fit:cover;object-position:center}
-.hero:after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(transparent,var(--bg))}
-.id{text-align:center;margin-top:-34px;position:relative;z-index:1}
-h1{font:400 44px/1 Anton,Impact,sans-serif;letter-spacing:.5px;text-transform:uppercase}
-h1 span{color:var(--sun)}
-.tag{color:var(--soft);margin-top:6px}
-.btns{display:grid;gap:12px;margin:24px 0 8px}
-.btn{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:18px;background:var(--card);border:1px solid var(--line);font-weight:700;font-size:18px;transition:transform .15s}
-.btn:hover,.btn:active{transform:scale(1.02)}
-.btn svg{width:30px;height:30px;flex:none}
-.btn small{display:block;font-weight:500;font-size:13px;color:var(--soft)}
-.yt{background:linear-gradient(90deg,#ff2d2d,#c4002f);border:0}
-.yt small{color:#ffe2e2}
-h2{font:400 26px/1.1 Anton,Impact,sans-serif;text-transform:uppercase;margin:36px 0 14px;letter-spacing:.5px}
-h2 em{font-style:normal;color:var(--pink)}
-.eps{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.ep{position:relative;border-radius:16px;overflow:hidden;background:var(--card);aspect-ratio:9/16}
+.sun{position:fixed;left:50%;top:150px;width:420px;height:420px;margin-left:-210px;border-radius:50%;
+ background:radial-gradient(circle,#ffd99a 0%,#ffc27a55 45%,transparent 70%);pointer-events:none;z-index:0}
+.cloud{position:fixed;height:26px;border-radius:20px;background:#b98bc6aa;pointer-events:none;z-index:0;animation:drift 40s linear infinite}
+.c1{top:70px;width:160px;left:-200px}.c2{top:210px;width:110px;left:-160px;animation-duration:55s;animation-delay:-20s}.c3{top:330px;width:200px;left:-240px;animation-duration:70s;animation-delay:-35s}
+@keyframes drift{to{transform:translateX(calc(100vw + 300px))}}
+.wrap{position:relative;z-index:1;max-width:480px;margin:0 auto;padding:0 16px 56px}
+.zig{position:absolute;right:6px;top:18px;width:120px;border-radius:22px;overflow:hidden;border:3px solid #fff8;box-shadow:0 10px 30px #0004;animation:hover 3.5s ease-in-out infinite;rotate:6deg}
+.zig img{display:block;width:100%}
+@keyframes hover{50%{transform:translateY(-12px)}}
+.top{padding-top:40px;text-align:center}
+.logo{display:inline-block;font:400 52px/0.95 Anton,Impact,sans-serif;letter-spacing:1px;text-transform:uppercase;color:#fff;text-shadow:0 4px 0 #6b2f7a,0 10px 24px #0005}
+.logo span{display:block;color:var(--sun);font-size:30px;letter-spacing:6px}
+.tag{margin:12px auto 0;max-width:330px;color:#fff;font-weight:700;text-shadow:0 1px 8px #0005}
+.hero{margin:24px -4px 0;border-radius:22px;overflow:hidden;border:3px solid #fff6;box-shadow:0 16px 40px #0005}
+.hero img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.pick{margin:26px 0 12px;text-align:center;font:400 24px Anton,sans-serif;text-transform:uppercase;letter-spacing:1px}
+.pick b{color:var(--sun)}
+.big{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.choice{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px 10px 16px;border-radius:24px;
+ font-weight:800;font-size:18px;text-align:center;box-shadow:0 12px 28px #0005;transition:transform .15s}
+.choice:active,.choice:hover{transform:translateY(-3px) scale(1.03)}
+.choice .face{width:92px;height:92px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 6px 16px #0004}
+.choice svg{position:absolute;top:12px;right:12px;width:26px;height:26px}
+.choice small{display:block;font-weight:600;font-size:12px;opacity:.9}
+.yt{background:linear-gradient(160deg,#ff3b3b,#b5002b)}
+.tt{background:linear-gradient(160deg,#1b1b22,#000);border:2px solid #25f4ee}
+.tt .face{border-color:#fe2c55}
+.ig{margin-top:14px;display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:20px;font-weight:800;
+ background:linear-gradient(90deg,#f58529,#dd2a7b 50%,#8134af);box-shadow:0 10px 24px #0004}
+.ig .face{width:52px;height:52px;border-radius:50%;object-fit:cover;border:3px solid #fff}
+.ig small{display:block;font-weight:600;font-size:12px;opacity:.9}
+h2{font:400 26px/1.1 Anton,sans-serif;text-transform:uppercase;margin:38px 0 14px;letter-spacing:.5px}
+h2 em{font-style:normal;color:var(--sun)}
+.eps{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ep{position:relative;border-radius:18px;overflow:hidden;background:var(--card);aspect-ratio:9/16;box-shadow:0 10px 24px #0004}
 .ep img{width:100%;height:100%;object-fit:cover}
-.ep .t{position:absolute;inset:auto 0 0 0;padding:28px 10px 10px;background:linear-gradient(transparent,#000c);font-weight:700;font-size:14px}
-.ep .n{position:absolute;top:8px;left:8px;background:var(--sun);color:#1a1000;font:400 14px Anton,sans-serif;padding:3px 8px;border-radius:8px}
-.soon{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px;border:2px dashed #ffffff33;background:transparent}
-.soon b{font:400 48px Anton,sans-serif;color:var(--sun)}
-.cast{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.who{text-align:center}
-.who img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:3px solid var(--sun);background:var(--card)}
-.who b{display:block;margin-top:8px;font:400 18px Anton,sans-serif;text-transform:uppercase}
+.ep .t{position:absolute;inset:auto 0 0 0;padding:30px 10px 10px;background:linear-gradient(transparent,#000c);font-weight:700;font-size:14px}
+.ep .n{position:absolute;top:8px;left:8px;background:var(--sun);color:#2a1600;font:400 14px Anton,sans-serif;padding:3px 8px;border-radius:8px}
+.soon{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px;border:2px dashed #fff6;background:#ffffff10}
+.soon b{font:400 54px Anton,sans-serif;color:var(--sun)}
+.cast{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.who{text-align:center;background:var(--card);border-radius:20px;padding:14px 10px;border:1px solid #ffffff22}
+.who img{width:100%;max-width:130px;aspect-ratio:1;object-fit:cover;border-radius:50%;border:4px solid var(--sun)}
+.who b{display:block;margin-top:8px;font:400 20px Anton,sans-serif;text-transform:uppercase}
 .who span{font-size:13px;color:var(--soft)}
-.pip{margin-top:36px;padding:18px;border-radius:18px;background:var(--card);border:1px solid var(--line);text-align:center}
-.pip b{font:400 22px Anton,sans-serif;text-transform:uppercase;color:var(--sun)}
-footer{text-align:center;color:#ffffff66;font-size:13px;margin-top:40px}
+.pip{margin-top:30px;padding:20px;border-radius:22px;background:linear-gradient(135deg,#ffbf47,#ff6f9c);color:#2a1030;text-align:center;box-shadow:0 12px 28px #0004}
+.pip b{font:400 26px Anton,sans-serif;text-transform:uppercase}
+footer{text-align:center;color:#ffffff80;font-size:13px;margin-top:40px}
+@media (prefers-reduced-motion:reduce){.cloud,.zig{animation:none}}
 </style>
 </head>
 <body>
+<div class="sun"></div><div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
 <div class="wrap">
-  <div class="hero"><img src="img/banner.jpg" alt="The Iffington hillside sign with Dave, Luna, Dr. Pip and Grump"></div>
-  <div class="id">
-    <h1>What If <span>Factory</span></h1>
-    <p class="tag">3D comedy shorts from the town of Iffington.<br>Every “what if” goes wrong. Dr. Pip says it's working as intended.</p>
+  <a class="zig" href="https://www.youtube.com/@wiffactory?sub_confirmation=1" target="_blank" rel="noopener" aria-label="Zig says subscribe"><img src="img/zig.jpg" alt="Zig waving from his spaceship"></a>
+
+  <div class="top">
+    <div class="logo">What If<span>Factory</span></div>
+    <p class="tag">3D comedy shorts from the town of Iffington. Dr. Pip invents. Dave suffers. 🧪</p>
   </div>
 
-  <div class="btns">
-    <a class="btn yt" href="https://www.youtube.com/@wiffactory?sub_confirmation=1" target="_blank" rel="noopener">
+  <div class="hero"><img src="img/banner.jpg" alt="Dave, Luna, Dr. Pip, Grump, Kevin, Fisher and Zig under the Iffington sign"></div>
+
+  <p class="pick">Where do you <b>watch?</b></p>
+  <div class="big">
+    <a class="choice yt" href="https://www.youtube.com/@wiffactory?sub_confirmation=1" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="#fff"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .6 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8ZM9.7 15V9l5.8 3-5.8 3Z"/></svg>
-      <div>YouTube<small>Subscribe · Shorts + long episodes soon</small></div>
+      <img class="face" src="img/pip.jpg" alt="Dr. Pip">
+      <div>YouTube<small>Dr. Pip says subscribe</small></div>
     </a>
-    <a class="btn" href="https://www.tiktok.com/@wiffactory" target="_blank" rel="noopener">
+    <a class="choice tt" href="https://www.tiktok.com/@wiffactory" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="#fff"><path d="M16.6 2h-3.4v13.4a2.9 2.9 0 1 1-2-2.8V9.1a6.3 6.3 0 1 0 5.4 6.3V8.6a8 8 0 0 0 4.7 1.5V6.7a4.7 4.7 0 0 1-4.7-4.7Z"/></svg>
-      <div>TikTok<small>@wiffactory</small></div>
-    </a>
-    <a class="btn" href="https://www.instagram.com/wiffactory/" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg>
-      <div>Instagram<small>@wiffactory</small></div>
+      <img class="face" src="img/dave.jpg" alt="Dave">
+      <div>TikTok<small>Dave is waiting</small></div>
     </a>
   </div>
+  <a class="ig" href="https://www.instagram.com/wiffactory/" target="_blank" rel="noopener">
+    <img class="face" src="img/luna.jpg" alt="Luna">
+    <div>Instagram<small>@wiffactory · you're already here 👋</small></div>
+  </a>
 
   <h2>Latest <em>episodes</em></h2>
   <div class="eps">
-    <a class="ep" href="https://www.instagram.com/reel/DfKpwiSDG-l/" target="_blank" rel="noopener">
+    <a class="ep" href="https://www.youtube.com/@wiffactory/shorts" target="_blank" rel="noopener">
       <span class="n">TEST #49</span><img src="img/ep005.jpg" alt="Dr. Pip with a pumpkin head">
       <div class="t">What if you trick-or-treated at a mad scientist's house?</div>
     </a>
@@ -85,8 +112,8 @@ footer{text-align:center;color:#ffffff66;font-size:13px;margin-top:40px}
   <div class="cast">
     <div class="who"><img src="img/dave.jpg" alt="Dave"><b>Dave</b><span>Always the test subject</span></div>
     <div class="who"><img src="img/pip.jpg" alt="Dr. Pip"><b>Dr. Pip</b><span>“Working as intended.”</span></div>
-    <div class="who"><img src="img/grump.jpg" alt="Grump"><b>Grump</b><span>…and Kevin</span></div>
     <div class="who"><img src="img/luna.jpg" alt="Luna"><b>Luna</b><span>Lives next door to chaos</span></div>
+    <div class="who"><img src="img/grump.jpg" alt="Grump"><b>Grump</b><span>…and Kevin</span></div>
   </div>
 
   <div class="pip"><b>Where's Pip?</b><p>He's hidden in almost every episode. Spot him? Tell us in the comments.</p></div>
